@@ -8,6 +8,8 @@ textarea.addEventListener('keyup', getValue)
 
 function getValue() {
     const text = textarea.value
+    analyzer.getWordCount(text)
     analyzer.getCharacterCount(text)
+    analyzer.getCharacterCountExcludingSpaces(text)
     
 }
