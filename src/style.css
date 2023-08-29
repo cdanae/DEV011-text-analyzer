@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #c5e4e7;
+}
+header {
+    text-align: center;
+    color: #00484a;
+    font-size: 24px;
+}
+.counters {
+    background-color: #00484a;
+    color: #fffbf0;
+    text-align: center;
+    width: 40%;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    list-style: none;
+}
+textarea[name] {
+    background-color: #fffbf0;
+    border: none;
+    border-radius: 20px;
+    width: 90%;
+    height: 200px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#reset-button {
+    background-color: #28c2ae;
+    color: #00484a;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 50px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: right;
+    color: #00484a;
+    margin-top: 100px;
+}

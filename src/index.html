@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,17 +17,17 @@
   </header>
   <main>
     <ul>
-      <li class="" data-testid="word-count">Palabras: 0</li>
-      <li class="" data-testid="character-count">Caracteres: 0</li>
-      <li class="" data-testid="character-no-spaces-count">Caracteres sin espacios: 0</li>
-      <li class="" data-testid="number-count">Números: 0</li>
-      <li class="" data-testid="number-sum">Suma números: 0</li>
-      <li class="" data-testid="word-length-average">Promedio longitud: 4.5</li>
+      <li class="counters" data-testid="word-count">Palabras: 0</li>
+      <li class="counters" data-testid="character-count">Caracteres: 0</li>
+      <li class="counters" data-testid="character-no-spaces-count">Caracteres sin espacios: 0</li>
+      <!-- <li class="counters" data-testid="number-count">Números: 0</li>
+      <li class="counters" data-testid="number-sum">Suma números: 0</li>
+      <li class="counters" data-testid="word-length-average">Promedio longitud: 4.5</li> -->
     </ul>
-    <form>
-      <textarea name="user-input" cols="30" rows="10"></textarea>
-      <button id="reset-button">Limpiar métricas</button>
-    </form>
+
+    <textarea name="user-input" cols="50" rows="10"></textarea>
+    <button id="reset-button">Limpiar métricas</button>
+
   </main>
   <footer>
     <p>Autora: Carolina D. Rodríguez Jiménez</p>
