@@ -14,9 +14,10 @@ function getValue() {
     analyzer.getWordCount(text)
     analyzer.getCharacterCount(text)
     analyzer.getCharacterCountExcludingSpaces(text)
+    analyzer.getAverageWordLength(text)
     
 }
 
 function clear() {
-location.reload()
+    location.reload()
 }

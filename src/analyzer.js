@@ -4,6 +4,8 @@ const analyzer = {
     const word = document.querySelector('li[data-testid="word-count"]')
     const wordCounter = text.trim().split(' ').length
     word.textContent = `Palabras: ${wordCounter}`
+    
+    return wordCounter
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
@@ -29,9 +31,19 @@ const analyzer = {
     }
 
     character.textContent = `Caracteres sin espacios: ${counter}`
+
+    return counter
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const liAverage = document.querySelector('li[data-testid="word-length-average"]')
+
+    const resultWordCount = analyzer.getWordCount(text);
+    const resultCharCountExclSpaces = analyzer.getCharacterCountExcludingSpaces(text);
+
+    const average = (resultCharCountExclSpaces/resultWordCount).toFixed(2)
+
+    liAverage.textContent = `Promedio longitud: ${average}`
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
