@@ -61,6 +61,17 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    const liNumberSum = document.querySelector('li[data-testid="number-sum"]')
+
+    let numberSum = 0
+    for (let i = 0; i < text.length; i++) {
+      const arr = text[i];
+      if (arr >= '0' && arr <= '9'){
+        numberSum = numberSum + parseInt(arr)
+      }
+    }
+
+    liNumberSum.textContent = `Suma números: ${numberSum}`
   },
 };
 
