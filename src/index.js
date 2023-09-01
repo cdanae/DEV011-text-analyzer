@@ -11,23 +11,25 @@ const liAverage = document.querySelector('li[data-testid="word-length-average"]'
 const liNumberCount = document.querySelector('li[data-testid="number-count"]');
 const liNumberSum = document.querySelector('li[data-testid="number-sum"]')
 
-liWordCount.textContent = `Palabras: ${wordCounter}`
-liCharacterCount.textContent = `Caracteres: ${characterCounter}`
-liCharacterSpaces.textContent = `Caracteres sin espacios: ${counterExcludingSpaces}`
-liAverage.textContent = `Promedio longitud: ${average}`
-liNumberCount.textContent = `Números: ${numberCount}`
-liNumberSum.textContent = `Suma números: ${numberSum}`
+
 
 
 textarea.addEventListener('keyup', () => {
-    const text = textarea.value
-    analyzer.getWordCount(text)
-    analyzer.getCharacterCount(text)
-    analyzer.getCharacterCountExcludingSpaces(text)
-    analyzer.getAverageWordLength(text)
-    analyzer.getNumberCount(text)
-    analyzer.getNumberSum(text)
+  const text = textarea.value
+  const wordCounter = analyzer.getWordCount(text)
+  const characterCounter = analyzer.getCharacterCount(text)
+  const counterExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(text)
+  const average = analyzer.getAverageWordLength(text)
+  const numberCount = analyzer.getNumberCount(text)
+  const numberSum = analyzer.getNumberSum(text)
+
+  liWordCount.textContent = `Palabras: ${wordCounter}`
+  liCharacterCount.textContent = `Caracteres: ${characterCounter}`
+  liCharacterSpaces.textContent = `Caracteres sin espacios: ${counterExcludingSpaces}`
+  liAverage.textContent = `Promedio longitud: ${average}`
+  liNumberCount.textContent = `Números: ${numberCount}`
+  liNumberSum.textContent = `Suma números: ${numberSum}`
 })
 btn.addEventListener('click', () => {
-    location.reload()
+  location.reload()
 })

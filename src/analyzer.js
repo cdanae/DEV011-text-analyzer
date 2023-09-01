@@ -18,13 +18,10 @@ const analyzer = {
     let counterExcludingSpaces = 0
     for (let i = 0; i < textUpperCase.length; i++) {
       const arr = textUpperCase[i];
-      if (
-        (arr >= 'A' && arr <= 'Z') ||
-        (arr >= '0' && arr <= '9')
-      ) {
+      if ( (arr >= 'A' && arr <= 'Z') || (arr >= '0' && arr <= '9') ) {
         counterExcludingSpaces++
       }
-      
+  
     }
 
     return counterExcludingSpaces
@@ -32,9 +29,15 @@ const analyzer = {
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const resultWordCount = analyzer.getWordCount(text);
-    const resultCharCountExclSpaces = analyzer.getCharacterCountExcludingSpaces(text);
+    let counterExclJustSpaces = 0;
 
-    const average = (resultCharCountExclSpaces/resultWordCount).toFixed(2)
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char !== ' ') {
+        counterExclJustSpaces++;
+      }
+    }
+    const average = (counterExclJustSpaces/resultWordCount).toFixed(2)
 
     return average
   },
