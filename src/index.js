@@ -15,6 +15,7 @@ function getValue() {
     analyzer.getCharacterCount(text)
     analyzer.getCharacterCountExcludingSpaces(text)
     analyzer.getAverageWordLength(text)
+    analyzer.getNumberCount(text)
     
 }
 

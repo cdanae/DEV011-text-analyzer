@@ -47,6 +47,17 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    const liNumberCount = document.querySelector('li[data-testid="number-count"]');
+    
+    let numberCount = 0
+    for (let i = 0; i < text.length; i++) {
+      const arr = text[i];
+      if (arr >= '0' && arr <= '9') {
+        numberCount++
+      }
+    }
+
+    liNumberCount.textContent = `Números: ${numberCount}`
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
