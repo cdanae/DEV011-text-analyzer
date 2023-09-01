@@ -19,7 +19,7 @@ header {
     border-radius: 10px;
     list-style: none;
 }
-textarea[name] {
+textarea[name="user-input"] {
     background-color: #fffbf0;
     border: none;
     border-radius: 20px;

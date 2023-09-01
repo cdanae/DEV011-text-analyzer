@@ -4,12 +4,22 @@ import analyzer from './analyzer.js';
 const textarea = document.querySelector('textarea');
 const btn = document.getElementById('reset-button');
 
+const liWordCount = document.querySelector('li[data-testid="word-count"]')
+const liCharacterCount = document.querySelector('li[data-testid="character-count"]')
+const liCharacterSpaces = document.querySelector('li[data-testid="character-no-spaces-count"]')
+const liAverage = document.querySelector('li[data-testid="word-length-average"]')
+const liNumberCount = document.querySelector('li[data-testid="number-count"]');
+const liNumberSum = document.querySelector('li[data-testid="number-sum"]')
 
-textarea.addEventListener('keyup', getValue)
-btn.addEventListener('click', clear)
+liWordCount.textContent = `Palabras: ${wordCounter}`
+liCharacterCount.textContent = `Caracteres: ${characterCounter}`
+liCharacterSpaces.textContent = `Caracteres sin espacios: ${counterExcludingSpaces}`
+liAverage.textContent = `Promedio longitud: ${average}`
+liNumberCount.textContent = `Números: ${numberCount}`
+liNumberSum.textContent = `Suma números: ${numberSum}`
 
 
-function getValue() {
+textarea.addEventListener('keyup', () => {
     const text = textarea.value
     analyzer.getWordCount(text)
     analyzer.getCharacterCount(text)
@@ -17,9 +27,7 @@ function getValue() {
     analyzer.getAverageWordLength(text)
     analyzer.getNumberCount(text)
     analyzer.getNumberSum(text)
-    
-}
-
-function clear() {
+})
+btn.addEventListener('click', () => {
     location.reload()
-}
+})
