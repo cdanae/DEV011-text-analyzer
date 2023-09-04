@@ -37,7 +37,8 @@ const analyzer = {
         counterExclJustSpaces++;
       }
     }
-    const average = (counterExclJustSpaces/resultWordCount).toFixed(2)
+    let average = (counterExclJustSpaces/resultWordCount).toFixed(2)
+    average = parseFloat(average)
 
     return average
   },
