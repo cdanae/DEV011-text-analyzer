@@ -44,27 +44,30 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    const findNum = text.match(/\b\d+(\.\d+)?\b/g) // retorna un array con los numeros encontrados
+
     let numberCount = 0
-    for (let i = 0; i < text.length; i++) {
-      const arr = text[i];
-      if (arr >= '0' && arr <= '9') {
-        numberCount++
-      }
+    if (findNum) {
+      numberCount = findNum.length
+      return numberCount;
+    } else {
+      return numberCount;
     }
-
-    return numberCount
-
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    const findNum = text.match(/\b\d+(\.\d+)?\b/g) // retorna un array con los numeros encontrados
+    
     let numberSum = 0
-    for (let i = 0; i < text.length; i++) {
-      const arr = text[i];
-      if (arr >= '0' && arr <= '9'){
-        numberSum = numberSum + parseInt(arr)
+    if (findNum) {
+      for (let i = 0; i < findNum.length; i++) {
+        const num = parseFloat(findNum[i]);
+        numberSum = numberSum + num;
       }
+      return numberSum
+    } else {
+      return numberSum
     }
-    return numberSum
   },
 };
 
