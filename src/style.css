@@ -45,6 +45,7 @@ textarea[name="user-input"] {
     border-radius: 20px;
     width: 90%;
     height: 200px;
+    padding: 15px 25px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 #reset-button {
@@ -57,6 +58,10 @@ textarea[name="user-input"] {
     font-weight: 600;
     padding: 15px 50px;
     margin-top: 20px;
+}
+#reset-button:hover{
+    background-color:  #00484a;
+    color: #28c2ae;
 }
 
 footer {
